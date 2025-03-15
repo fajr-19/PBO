@@ -10,12 +10,15 @@ public class skillManager {
         System.out.println("4. Misc"); 
         System.out.print("Enter choice (1-4): "); 
 
-        int (choice) {
-            case 1: return "Fighting"
-            case 2: return "Magic"
-            case 3: return "Resist"
-            case 4: return "Misc"
-            default: return "NPC"
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        switch (choice) {
+            case 1: return "Fighting";
+            case 2: return "Magic";
+            case 3: return "Resist";
+            case 4: return "Misc";
+            default: return "NPC";
 
         }
     }

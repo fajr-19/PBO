@@ -1,4 +1,4 @@
-import java.utilScanner;
+import java.util.Scanner;
 
 public class Player {
     private String nickname;
@@ -7,36 +7,31 @@ public class Player {
 
     public Player() {
         this.nickname = inputNickname();
-        this.skills = choiceSkill();
+        this.skills = skillManager.choiceSkill();
     }
 
     public Player(String nickname) {
         this.nickname = nickname;
-        this.skills = choiceSkill();
+        this.skills = skillManager.choiceSkill();
     }
 
-    public Player(String skills) {
-        this.nickname = nickname;
-        this.skills = skills;
-    }
-
-    private String inputNickname() {
+        private String inputNickname() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukkan nickname: ");
         return scanner.nextLine();
     }
 
-    public string getNickname(){
+    public String getNickname(){
         return nickname;
     }
 
-    public string getSkills(){
+    public String getSkills(){
         return skills;
     }
 
     public void displayInfo() {
-        System.out.println("Nickname: " nickname);
-        System.out.println("Skill: " skills);
+        System.out.println("Nickname: " + nickname);
+        System.out.println("Skill: " + skills);
     }
 
 }
